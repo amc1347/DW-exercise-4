@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.PDST || 4000;
+const port = process.env.PDRT || 4000;
 
 const indexRoute = require("./routes/index.js");
 
