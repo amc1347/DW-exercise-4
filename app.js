@@ -6,6 +6,6 @@ const indexRoute = require("./routes/index.js");
 
 app.use("/", indexRoute);
 
-app.listen(post, () =>
-console.log(`Exercise Four is running at localhost:${port}`)
+app.listen(port, () =>
+    console.log(`Exercise Four is running at localhost:${port}`)
 );
