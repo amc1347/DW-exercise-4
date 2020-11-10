@@ -12,18 +12,16 @@ const blogposts = db.collection("blogposts");
 
 router.get("/", (req, res) => {
     const blogpostsArray = [];
-
-
     blogposts
     .get()
-    .then(querySnapshot => {
+    .then((querySnapshot) => {
         console.log('querySnapshot', querySnapshot);
-        querySnapshot.forEach(doc => {
-            blogpostsArray.push(doc.data())
-        })
+        querySnapshot.forEach((doc) => {
+            blogpostsArray.push(doc.data());
+        });
         return res.send(blogpostsArray);
     })
-    .catch(function(e) {
+    .catch(function (e) {
         console.warn('error', e);
         return res.send(error);
     });
