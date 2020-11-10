@@ -1,6 +1,6 @@
 // show all blog posts
 
-const { query } = require("express");
+// const { query } = require("express");
 const express = require("express");
 const router = express.Router();
 
@@ -15,7 +15,6 @@ router.get("/", (req, res) => {
     blogposts
     .get()
     .then((querySnapshot) => {
-        console.log('querySnapshot', querySnapshot);
         querySnapshot.forEach((doc) => {
             blogpostsArray.push(doc.data());
         });
